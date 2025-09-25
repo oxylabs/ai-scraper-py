@@ -1,11 +1,12 @@
 # AI-Scraper
-[![Header Image](IMAGE_URL_HERE)](LINK_URL_HERE)
 
-The [AI-Scraper](AI_SCRAPER_LINK) is an experimental scraping tool by [Oxylabs AI Studio](AI_STUDIO_LINK) that extracts data from a single webpage using AI. It identifies and parses relevant information based on a natural language prompt, then delivers results in either structured JSON (for automation and APIs) or Markdown format (best for readable outputs and AI workflows).
+[![AI-Scraper Header](IMAGE_URL_HERE)](LINK_URL_HERE)
 
-This AI scraper removes the need for CSS/XPath selectors or custom parsers, so it integrates seamlessly with various automation pipelines. Automatic schema generation and flexible output formats provide users with an easy way to extract clean, structured data without ever needing to maintain parsing logic.
+[![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
----
+The [**AI-Scraper**](https://aistudio.oxylabs.io/apps/scrape) is an experimental scraping tool by [**Oxylabs AI Studio**](https://aistudio.oxylabs.io/) that extracts data from a single webpage using AI. It identifies and parses relevant information based on a natural language prompt, then delivers results in either **structured JSON** (for automation and APIs) or **Markdown format** (best for readable outputs and AI workflows).
+
+This AI scraper removes the need for CSS/XPath selectors or custom parsers, so it integrates seamlessly with various automation pipelines. **Automatic schema generation** and flexible output formats provide users with an easy way to extract clean, structured data without ever needing to maintain parsing logic.
 
 ## Key features
 
@@ -13,8 +14,6 @@ This AI scraper removes the need for CSS/XPath selectors or custom parsers, so i
 - **Multiple output formats** – Choose JSON for structured workflows or Markdown for human-readable results and AI workflows.  
 - **Automatic schema generation** – Generate a schema automatically from a prompt or define it manually for precise JSON parsing.  
 - **Works on any public webpage** – Extract from e-commerce, news, blogs, or any other accessible source.  
-
----
 
 ## How it works
 
@@ -25,18 +24,17 @@ To scrape a webpage with AI-Scraper, follow these steps:
 3. **Select the output format** – structured JSON or Markdown.  
 4. **(Optional) Define a schema** – Let AI-Scraper generate one automatically, or provide your own OpenAPI schema for the exact structure you desire.  
 
----
-
 ### Installation
 
-To begin, make sure you have access to an AI Studio API key (or [get a free trial](TRIAL_LINK) with 1000 credits) and `Python ver. 3.10` or above installed. You can install the `oxylabs-ai-studio` package using pip:
+To begin, make sure you have access to an AI Studio API key (or [get a free trial](https://aistudio.oxylabs.io/register) with 1000 credits) and `Python ver. 3.10` or above installed. You can install the `oxylabs-ai-studio` package using pip:
 
 ```bash
 pip install oxylabs-ai-studio
 ```
+
 ### Code examples (Python)
 
-The following examples show how to use `AI-Scraper` to extract data from a sample page.
+The following examples show how to use `AiScraper` to extract data from a sample page.
 
 ```python
 from oxylabs_ai_studio.apps.ai_scraper import AiScraper
@@ -62,23 +60,19 @@ print("Results:")
 for item in result.data['games']:
     print(item, "\n")
 ```
-Learn more about AI-Scraper and Oxylabs AI Studio Python SDK in our [PyPI repository](LINK). You can also check out our [AI Studio JavaScript SDK](LINK) guide for JS users.
-
----
+Learn more about AI-Scraper and Oxylabs AI Studio Python SDK in our [PyPI repository](https://pypi.org/project/oxylabs-ai-studio/). You can also check out our [AI Studio JavaScript SDK](https://github.com/oxylabs/oxylabs-ai-studio-js) guide for JS users.
 
 ### Request parameters
 
 | Parameter           | Description                                                    | Default Value |
 |---------------------|----------------------------------------------------------------|---------------|
-| `url*`              | Target URL to scrape                                           | –             |
-| `output_format`     | Output format (`json`, `markdown`)                             | markdown      |
+| `url`*              | Target URL to scrape                                           | –             |
+| `output_format`     | Output format (`json`, `markdown`)                             | `markdown`      |
 | `schema`            | OpenAPI schema for structured extraction (mandatory for JSON)  | –             |
-| `render_javascript` | Enable render JavaScript                                       | False         |
+| `render_javascript` | Enable render JavaScript                                       | `False`         |
 | `geo_location`      | Proxy location in ISO2 format                                  | –             |
 
-\* – mandatory parameters
-
----
+`*` – mandatory parameters
 
 ### Output samples
 
@@ -107,8 +101,6 @@ AI-Scraper can be applied to a wide variety of data collection tasks:
 3. **Scrape pricing pages** – Collect structured pricing information for competitor or market research.  
 4. **Extract job postings** – Capture job titles, locations, salaries, and posting dates from recruitment portals.  
 
----
-
 ## FAQ
 
 ### How does AI-Scraper differ from normal scrapers?
@@ -124,16 +116,12 @@ No, schema is not mandatory, but it’s required if you want structured JSON out
 Unlike traditional scrapers, AI-Scraper is more resilient to layout changes because it interprets content with AI. However, major changes may require you to adjust either your prompt or the schema.
 
 ### Is AI-Scraper free?
-Oxylabs AI Studio AI-Scraper is free to try by signing up for a free trial that includes 1,000 credits. After the trial, the [monthly plans](PRICING_LINK) start at just $12/month with 3000 credits and 1 request/s, with higher plans offering more credits and higher request rates.
-
----
+Oxylabs AI Studio AI-Scraper is free to try by signing up for a free trial that includes 1,000 credits. After the trial, the [monthly plans](https://aistudio.oxylabs.io/pricing) start at just $12/month with 3000 credits and 1 request/s, with higher plans offering more credits and higher request rates.
 
 ## Learn more
 
-For a deeper dive into available parameters, advanced integrations, and additional examples, check out the [AI Studio documentation](DOCS_LINK).
-
----
+For a deeper dive into available parameters, advanced integrations, and additional examples, check out the [AI Studio documentation](https://aistudio.oxylabs.io/apps/scrape).
 
 ## Contact us
 
-If you have questions or need support, reach out to us at [hello@oxylabs.io](mailto:hello@oxylabs.io), through [live chat](CHAT_LINK), or join our [Discord community](DISCORD_LINK).
+If you have questions or need support, reach out to us at [hello@oxylabs.io](mailto:hello@oxylabs.io), through [live chat](https://oxylabs.drift.click/oxybot), or join our [Discord community](https://discord.gg/Pds3gBmKMH).
