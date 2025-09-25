@@ -92,6 +92,8 @@ Results:
 
 {'developer': 'Nintendo', 'platform': 'wii', 'type': 'singleplayer', 'price': 87.99, 'title': "Kirby's Return to Dream Land", 'genre': ['General', 'Action', 'Platformer', '2D']}
 ```
+Alternatively, you can use `output_format=”markdown”` to receive Markdown results instead of parsed JSON.
+
 ## Practical use cases
 
 AI-Scraper can be applied to a wide variety of data collection tasks:
