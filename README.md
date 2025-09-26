@@ -76,7 +76,7 @@ Learn more about AI-Scraper and Oxylabs AI Studio Python SDK in our [PyPI reposi
 
 ### Output samples
 
-The `AI-Scraper` can return parsed, ready-to-use output that is easy to integrate into your applications.
+The AI-Scraper can return parsed, ready-to-use output that is easy to integrate into your applications.
 
 This is a structured JSON of the response output:
 
@@ -96,7 +96,7 @@ Alternatively, you can use `output_format=”markdown”` to receive Markdown re
 
 ## Practical use cases
 
-AI-Scraper can be applied to a wide variety of data collection tasks:
+Oxylabs AI-Scraper can be applied to a wide variety of data collection tasks:
 
 1. **Extract product details** – Gather product names, descriptions, and prices from e-commerce sites.  
 2. **Parse news articles** – Retrieve article titles, dates, authors, and body text.  
