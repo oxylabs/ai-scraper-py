@@ -96,16 +96,15 @@ Results:
       ]
     },
     {
-      "developer": null,
-      "platform": null,
+      "developer": "Eidos Interactive",
+      "platform": "wii",
       "type": null,
-      "price": 87.99,
-      "title": "Kirby's Return to Dream Land",
+      "price": 80.99,
+      "title": "Death Jr.: Root of Evil",
       "genre": [
-        "General",
         "Action",
         "Platformer",
-        "2D"
+        "3D"
       ]
     }...
 ```
