@@ -38,6 +38,7 @@ The following examples show how to use `AiScraper` to extract data from a sample
 
 ```python
 from oxylabs_ai_studio.apps.ai_scraper import AiScraper
+import json
 
 # Initialize the AI Scraper with your API key
 scraper = AiScraper(api_key="YOUR_API_KEY")
@@ -46,7 +47,7 @@ scraper = AiScraper(api_key="YOUR_API_KEY")
 schema = scraper.generate_schema(prompt="want to parse developer, platform, type, price game title, and genre (array)")
 print(f"Generated schema: {schema}")
 
-# Scrape a specific webpage and extract structured data
+# Scrape a webpage and extract structured data
 url = "https://sandbox.oxylabs.io/products/3"
 result = scraper.scrape(
     url=url,
@@ -55,10 +56,9 @@ result = scraper.scrape(
     render_javascript=False,
     geo_location="US",
 )
-# Print the scrape output
+# Print the scrape output as JSON
 print("Results:")
-for item in result.data['games']:
-    print(item, "\n")
+print(json.dumps(result.data, indent=2))
 ```
 Learn more about AI-Scraper and Oxylabs AI Studio Python SDK in our [PyPI repository](https://pypi.org/project/oxylabs-ai-studio/). You can also check out our [AI Studio JavaScript SDK](https://github.com/oxylabs/oxylabs-ai-studio-js) guide for JS users.
 
@@ -82,15 +82,32 @@ This is a structured JSON of the response output:
 
 ```json
 Results:
-{'developer': 'Nintendo EAD Tokyo', 'platform': 'wii', 'type': 'singleplayer', 'price': 91.99, 'title': 'Super Mario Galaxy 2', 'genre': ['Action', 'Platformer', '2D']} 
-
-{'developer': 'Nintendo', 'platform': 'wii', 'type': 'singleplayer', 'price': 88.99, 'title': 'Metroid Prime 3: Corruption', 'genre': ['Action', 'Shooter', 'First-Person', 'Sci-Fi', 'Arcade']} 
-
-{'developer': 'Nintendo', 'platform': 'wii', 'type': 'singleplayer', 'price': 83.99, 'title': 'Tomena Sanner', 'genre': ['Action', 'General']} 
-
-{'developer': 'Eidos Interactive', 'platform': 'wii', 'type': 'singleplayer', 'price': 80.99, 'title': 'Death Jr.: Root of Evil', 'genre': ['Action', 'Platformer', '3D']} 
-
-{'developer': 'Nintendo', 'platform': 'wii', 'type': 'singleplayer', 'price': 87.99, 'title': "Kirby's Return to Dream Land", 'genre': ['General', 'Action', 'Platformer', '2D']}
+{
+  "games": [
+    {
+      "developer": "Nintendo EAD Tokyo",
+      "platform": "wii",
+      "type": "singleplayer",
+      "price": 91.99,
+      "title": "Super Mario Galaxy 2",
+      "genre": [
+        "Action",
+        "Platformer"
+      ]
+    },
+    {
+      "developer": null,
+      "platform": null,
+      "type": null,
+      "price": 87.99,
+      "title": "Kirby's Return to Dream Land",
+      "genre": [
+        "General",
+        "Action",
+        "Platformer",
+        "2D"
+      ]
+    }...
 ```
 Alternatively, you can use `output_format=”markdown”` to receive Markdown results instead of parsed JSON.
 
